@@ -826,6 +826,7 @@ header {
         inset 0 1px 0 rgba(255,255,255,0.8);
     z-index: 9999;
     backdrop-filter: blur(10px);
+    opacity: 0.15;
 }
 
 .back-button:hover {
@@ -836,6 +837,7 @@ header {
         0 6px 20px rgba(0,0,0,0.2),
         0 0 40px rgba(255,255,255,0.4),
         inset 0 1px 0 rgba(255,255,255,1);
+    opacity: 1;
 }
 
 .back-arrow {
