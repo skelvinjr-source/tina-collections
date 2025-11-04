@@ -902,6 +902,31 @@ document.addEventListener('click', function(e) {
     }
 });
 
+// Handle URL hash navigation
+function handleHashNavigation() {
+    const hash = window.location.hash;
+
+    if (hash === '#home') {
+        showHomePage();
+    } else if (hash === '#products') {
+        showProductsPage();
+    } else if (hash === '#about') {
+        showAboutPage();
+    } else if (hash === '#cart') {
+        showCart();
+    } else if (hash === '#contact') {
+        showContact();
+    } else if (hash === '#admin-panel') {
+        showAdminPanel();
+    }
+}
+
+// Listen for hash changes in URL
+window.addEventListener('hashchange', handleHashNavigation);
+
+// Check hash on page load
+window.addEventListener('load', handleHashNavigation);
+
 // Chat Widget Functions
 // Generate unique session ID for tracking conversations
 let chatSessionId = localStorage.getItem('chatSessionId');
