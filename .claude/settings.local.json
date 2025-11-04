@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(del:*)",
-      "Bash(gh --version:*)"
+      "Bash(gh --version:*)",
+      "Bash(git remote add:*)"
     ],
     "deny": [],
     "ask": []
