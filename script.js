@@ -596,6 +596,9 @@ function displayCart() {
         const cartItemDiv = document.createElement('div');
         cartItemDiv.className = 'cart-item';
         cartItemDiv.innerHTML = `
+            <div class="cart-item-image">
+                <img src="${item.image}" alt="${item.name}">
+            </div>
             <div class="cart-item-info">
                 <h4>${item.name}</h4>
                 <p>L$${item.price.toFixed(2)} each</p>
@@ -604,10 +607,10 @@ function displayCart() {
             <div class="cart-item-controls">
                 <div class="quantity-control">
                     <button class="quantity-btn" onclick="updateQuantityByIndex(${index}, -1)">-</button>
-                    <span style="font-weight: bold; font-size: 1.1rem;">${item.quantity}</span>
+                    <span>${item.quantity}</span>
                     <button class="quantity-btn" onclick="updateQuantityByIndex(${index}, 1)">+</button>
                 </div>
-                <span style="font-weight: bold; font-size: 1.2rem;">L$${(item.price * item.quantity).toFixed(2)}</span>
+                <div class="cart-item-price">L$${(item.price * item.quantity).toFixed(2)}</div>
                 <button class="remove-btn" onclick="removeFromCartByIndex(${index})">Remove</button>
             </div>
         `;
